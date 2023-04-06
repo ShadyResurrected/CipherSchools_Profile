@@ -24,8 +24,9 @@ const Navbar = () => {
 
   const [isOpenFilter, setIsOpenFilter] = useState(false);
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -40,13 +41,11 @@ const Navbar = () => {
         <span>CipherSchools</span>
       </div>
       <div className="top__middle">
-        <div
-          className="browse__section"
-          onClick={handleClick}
-        >
+        <div className="browse__section" onClick={handleClick}>
           <AiOutlineCompass className="browse_icon" />
           <span>Browse</span>
           <MdKeyboardArrowDown />
+        </div>
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
@@ -62,7 +61,6 @@ const Navbar = () => {
               </MenuItem>
             ))}
           </Menu>
-        </div>
         <div className="search__input__container">
           <AiOutlineSearch
             className="search__icon"
