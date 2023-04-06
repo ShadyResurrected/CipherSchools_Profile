@@ -43,10 +43,13 @@ section {
       height: 35px;
       gap: 3px;
       input {
+        height: 30px;
         width: 350px;
         border-radius: 10px;
         border: 0;
         background-color: #f2f5fa;
+        outline: none;
+        font-size: 15px;
       }
     }
   }
@@ -79,6 +82,7 @@ section {
         background-repeat: no-repeat;
         background-size: contain;
         border-radius: 50%;
+        cursor: pointer;
       }
       .cipher__points__info{
         color: orange;

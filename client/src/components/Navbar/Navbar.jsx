@@ -7,11 +7,11 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 import "./style.scss";
-import { Switch, Badge, Menu, MenuItem, Button } from "@mui/material";
-import DropDown from "../Drop_Down/DropDown";
+import { Switch, Badge, Tooltip } from "@mui/material";
+import DropDown from "../DropDown/DropDown";
 
 const Navbar = () => {
-  const arr = [
+  const browseArr = [
     "App Development",
     "Web Development",
     "Game Development",
@@ -21,17 +21,31 @@ const Navbar = () => {
     "Data Science",
     "Others",
   ];
+  const filterArr = ["Video", "Course", "Instructor", "All"];
+  const profileArr = [
+    "Dashboard",
+    "Profile",
+    "Enrolled Courses",
+    "Wishlist",
+    "Liked Videos",
+  ];
 
-  const [isOpenFilter, setIsOpenFilter] = useState(false);
+  const [anchorElB, setAnchorElB] = useState(null);
+  const [anchorElF, setAnchorElF] = useState(null);
+  const [anchorElP, setAnchorElP] = useState(null);
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const openB = Boolean(anchorElB);
+  const openF = Boolean(anchorElF);
+  const openP = Boolean(anchorElP);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  const handleClickB = (event) => {
+    setAnchorElB(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleClickF = (event) => {
+    setAnchorElF(event.currentTarget);
+  };
+  const handleClickP = (event) => {
+    setAnchorElP(event.currentTarget);
   };
 
   return (
@@ -41,26 +55,19 @@ const Navbar = () => {
         <span>CipherSchools</span>
       </div>
       <div className="top__middle">
-        <div className="browse__section" onClick={handleClick}>
+        <div className="browse__section" onClick={handleClickB}>
           <AiOutlineCompass className="browse_icon" />
           <span>Browse</span>
           <MdKeyboardArrowDown />
         </div>
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            {arr.map((term) => (
-              <MenuItem key={term} onClick={handleClose}>
-                {term}
-              </MenuItem>
-            ))}
-          </Menu>
+        {/* Always put Menu mui out of the icons */}
+        {/* Browse DropDown */}
+        <DropDown
+          anchorEl={anchorElB}
+          open={openB}
+          setAnchorEl={setAnchorElB}
+          arr={browseArr}
+        />
         <div className="search__input__container">
           <AiOutlineSearch
             className="search__icon"
@@ -70,22 +77,49 @@ const Navbar = () => {
           <BsFilterRight
             className="filter__icon"
             style={{ cursor: "pointer" }}
-            onClick={() => setIsOpenFilter(!isOpenFilter)}
+            onClick={handleClickF}
           />
-          {/* {isOpenFilter ? <DropDown arr={["a", "b", "c"]} /> : ""} */}
         </div>
+
+        {/* Filter DropDown */}
+        <DropDown
+          anchorEl={anchorElF}
+          open={openF}
+          setAnchorEl={setAnchorElF}
+          arr={filterArr}
+        />
       </div>
       <div className="top__right">
-        <Badge badgeContent={4} color="primary">
-          <IoMdNotificationsOutline size={"26px"} />
-        </Badge>
-        <div className="profile__pic"></div>
+        <Tooltip title="Notification">
+          <Badge badgeContent={4} color="primary">
+            <IoMdNotificationsOutline
+              size={"26px"}
+              style={{ cursor: "pointer" }}
+            />
+          </Badge>
+        </Tooltip>
+        <Tooltip title="Profile">
+        <div
+          className="profile__pic"
+          onClick={handleClickP}
+          style={{ cursor: "pointer" }}
+        ></div>
+        </Tooltip>
         <div className="cipher__points__container">
+        <Tooltip title="Cipher Points: 10">
           <div className="cipher__points__img"></div>
+          </Tooltip>
           <div className="cipher__points__info">10</div>
         </div>
         <Switch className="toggle__icon" />
       </div>
+      {/* Profile DropDown */}
+      <DropDown
+        anchorEl={anchorElP}
+        open={openP}
+        setAnchorEl={setAnchorElP}
+        arr={profileArr}
+      />
     </section>
   );
 };
