@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&family=Source+Sans+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fw-normal: 400;
+  --fw-medium: 550;
+  --fw-bold: 700;
+  --ff-primary: "Open Sans",Roboto,sans-serif;
+  --ff-secondary: "Source Sans Pro",Roboto,sans-serif;
+  --ff-code: "Source Code Pro",Consolas,monospace;
+}
