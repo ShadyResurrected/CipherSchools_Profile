@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&family=Source+Sans+Pro&display=swap");
 
 * {
   margin: 0;
@@ -10,7 +10,28 @@
   --fw-normal: 400;
   --fw-medium: 550;
   --fw-bold: 700;
-  --ff-primary: "Open Sans",Roboto,sans-serif;
-  --ff-secondary: "Source Sans Pro",Roboto,sans-serif;
-  --ff-code: "Source Code Pro",Consolas,monospace;
+  --ff-primary: "Open Sans", Roboto, sans-serif;
+  --ff-secondary: "Source Sans Pro", Roboto, sans-serif;
+  --ff-code: "Source Code Pro", Consolas, monospace;
+}
+
+.primary__btn {
+  align-items: center;
+  background: #f3912e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  height: 28px;
+  justify-content: center;
+  line-height: 1;
+  outline: none;
+  transition: 0.15s ease;
+  width: 80px;
+  text-transform: capitalize;
+  &:hover{
+    opacity: .75;
+  }
 }

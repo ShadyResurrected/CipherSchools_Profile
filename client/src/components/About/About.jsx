@@ -2,6 +2,8 @@ import React from "react";
 
 import "./style.scss";
 
+import { TextField } from "@mui/material";
+
 const About = () => {
   return (
     <div className="about__container">
@@ -19,10 +21,16 @@ const About = () => {
       <div className="about__aboutme__section">
         <div className="aboutme__top">
           <h2>about me</h2>
-          <button>edit</button>
+          <button className="primary__btn">edit</button>
         </div>
         <div className="aboutme__bottom">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Add something about you"></textarea>
+          <TextField
+            fullWidth
+            placeholder="Add something about you"
+            rows={4}
+            multiline
+            disabled
+          />
         </div>
       </div>
     </div>
