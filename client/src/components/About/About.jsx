@@ -1,11 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import './style.scss'
+import "./style.scss";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <div className="about__container">
+      <div className="about__banner__section">
+        <div className="about__profile__left">
+          <div className="about__profile__pic"></div>
+          <div className="about__profile__text">
+            <p>Hello,</p>
+            <h2>Chandradeep Chandra</h2>
+            <p>cchandra554@gmail.com</p>
+          </div>
+        </div>
+        <div className="about__profile__right">0 Followers</div>
+      </div>
+      <div className="about__aboutme__section">
+        <div className="aboutme__top">
+          <h2>about me</h2>
+          <button>edit</button>
+        </div>
+        <div className="aboutme__bottom">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Add something about you"></textarea>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default About
+export default About;

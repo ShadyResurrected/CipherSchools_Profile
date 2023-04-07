@@ -11,14 +11,14 @@ import Professional from '../components/Professional_Information/Professional'
 
 const Profile = () => {
   return (
-    <div>
+    <main>
       <About/>
       <Cipher/>
       <Interests/>
       <Web/>
       <Password/>
       <Professional/>
-    </div>
+    </main>
   )
 }
 

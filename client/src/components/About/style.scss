@@ -1,0 +1,44 @@
+.about__container {
+  width: 100%;
+  .about__banner__section {
+    background: url(/src/assets/background_user_img.png);
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    justify-content: space-between;
+    .about__profile__left {
+      border-radius: 10px;
+      display: flex;
+      gap: 5px;
+      .about__profile__pic {
+        height: 90px;
+        width: 90px;
+        background: url(/src/assets/logo.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+      .about__profile__text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p {
+          font-family: var(--ff-primary);
+        }
+        h2 {
+          font-family: var(--ff-primary);
+        }
+        p {
+          font-family: var(--ff-secondary);
+        }
+      }
+    }
+    .about__profile__right {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
