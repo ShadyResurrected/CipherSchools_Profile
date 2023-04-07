@@ -15,9 +15,9 @@ const Profile = () => {
       <About/>
       <Cipher/>
       <Web/>
+      <Professional/>
       <Interests/>
       <Password/>
-      <Professional/>
     </main>
   )
 }

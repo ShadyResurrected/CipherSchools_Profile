@@ -1,0 +1,16 @@
+.pro__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .pro__top{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            text-transform: capitalize;
+        }
+    }
+    .pro__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+}
