@@ -1,0 +1,36 @@
+.web__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  .web__top {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      text-transform: capitalize;
+    }
+  }
+  .web__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 40px;
+    .web__input {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 8px;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.216);
+      padding: 0.5rem 1rem;
+      gap: 5px;
+      input {
+        height: 30px;
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
