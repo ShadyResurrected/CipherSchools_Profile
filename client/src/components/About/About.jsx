@@ -33,6 +33,7 @@ const About = () => {
           />
         </div>
       </div>
+      <hr />
     </div>
   );
 };

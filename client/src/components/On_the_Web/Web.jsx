@@ -26,6 +26,7 @@ const Web = () => {
 
   return (
     <div className="web__container">
+      <hr />
       <div className="web__top">
         <h2>on the web</h2>
         <button className="primary__btn">Edit</button>
@@ -44,6 +45,7 @@ const Web = () => {
           </>
         ))}
       </div>
+      <hr />
     </div>
   );
 };
