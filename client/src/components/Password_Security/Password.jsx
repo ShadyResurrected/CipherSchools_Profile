@@ -14,6 +14,7 @@ const Password = () => {
         <p>Password</p>
         <input type="password" value={"abcdefghikjl"} disabled/>
       </div>
+      <hr />
     </div>
   )
 }

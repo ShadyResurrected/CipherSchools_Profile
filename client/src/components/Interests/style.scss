@@ -1,0 +1,23 @@
+.interests__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100px;
+    .interests__top{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            text-transform: capitalize;
+        }
+    }
+    .interests__bottom{
+        display: flex;
+        column-gap: 30px;
+        .interest__tab{
+            background-color: rgba(243,145,46,.1);
+            color: #f3912e;
+            padding: 8px 15px;
+            border-radius: 10px;
+        }
+    }
+}
