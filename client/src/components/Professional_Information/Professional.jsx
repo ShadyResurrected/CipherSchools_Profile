@@ -2,14 +2,8 @@ import React, { useState } from "react";
 
 import "./style.scss";
 
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
 const Professional = () => {
-
-  const [age, setAge] = useState('');
+  const [age, setAge] = useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -25,22 +19,26 @@ const Professional = () => {
         <div className="pro__tab">
           <div className="pro__info__heading">Highest Education</div>
           <div className="pro__info__select">
-          <FormControl fullWidth>
-        <Select
-          value={age}
-          label="Gradutaion"
-          onChange={handleChange}
-        >
-          <MenuItem value={"Graduation"}>Graduaton</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
+            <select name="education">
+              <option value="primary">Primary</option>
+              <option value="Secondary">Secondary</option>
+              <option value="Higher Secondary">Higher Secondary</option>
+              <option value="Graduation">Graduation</option>
+              <option value="Post Graduation">Post Graduation</option>
+            </select>
           </div>
         </div>
         <div className="pro__tab">
-          <div className="pro__info__heading">Highest Edcation</div>
-          <div className="pro__info__select">select</div>
+          <div className="pro__info__heading">What do you do currently?</div>
+          <div className="pro__info__select">
+          <select name="education">
+              <option value="schooling">Schooling</option>
+              <option value="College Student">College Student</option>
+              <option value="Teaching">Teaching</option>
+              <option value="Job">Job</option>
+              <option value="Freelancing">Freelancing</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
